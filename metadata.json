@@ -1,0 +1,6 @@
+{
+  "name": "RifaPrint & Bingo Studio",
+  "description": "PWA profesional de maquetación, imposición N-Up y exportación de boletos de rifa y cartones de bingo en pliegos A4 con marcas de corte y PDF vectorial.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

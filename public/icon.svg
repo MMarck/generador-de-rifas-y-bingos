@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#2e1065" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="ticketGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="bingoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background container -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <!-- Subtle Print Grid Marks -->
+  <g stroke="#ffffff" stroke-opacity="0.15" stroke-width="2" stroke-dasharray="6,6">
+    <line x1="48" y1="96" x2="464" y2="96"/>
+    <line x1="48" y1="416" x2="464" y2="416"/>
+    <line x1="96" y1="48" x2="96" y2="464"/>
+    <line x1="416" y1="48" x2="416" y2="464"/>
+  </g>
+
+  <!-- Ticket Shape (Rotated) -->
+  <g transform="translate(130, 260) rotate(-14)" filter="url(#shadow)">
+    <rect x="-90" y="-55" width="220" height="110" rx="14" fill="url(#ticketGrad)"/>
+    <!-- Stub notch -->
+    <circle cx="-15" cy="-55" r="14" fill="#2e1065"/>
+    <circle cx="-15" cy="55" r="14" fill="#2e1065"/>
+    <line x1="-15" y1="-40" x2="-15" y2="40" stroke="#78350f" stroke-width="3" stroke-dasharray="4,4"/>
+    <!-- Ticket text lines -->
+    <rect x="5" y="-35" width="85" height="12" rx="4" fill="#78350f" opacity="0.8"/>
+    <rect x="5" y="-15" width="55" height="8" rx="3" fill="#78350f" opacity="0.6"/>
+    <rect x="5" y="0" width="70" height="8" rx="3" fill="#78350f" opacity="0.6"/>
+    <rect x="5" y="22" width="60" height="14" rx="4" fill="#451a03"/>
+    <!-- Stub details -->
+    <rect x="-75" y="-30" width="45" height="8" rx="2" fill="#78350f" opacity="0.7"/>
+    <rect x="-75" y="-15" width="35" height="6" rx="2" fill="#78350f" opacity="0.6"/>
+    <rect x="-75" y="15" width="45" height="12" rx="3" fill="#451a03"/>
+  </g>
+
+  <!-- Bingo Card Shape (Foreground) -->
+  <g transform="translate(320, 280) rotate(10)" filter="url(#shadow)">
+    <rect x="-100" y="-115" width="200" height="230" rx="18" fill="#ffffff"/>
+    <rect x="-100" y="-115" width="200" height="48" rx="18" fill="url(#bingoGrad)"/>
+    <!-- Header Text B-I-N-G-O -->
+    <text x="0" y="-82" fill="#ffffff" font-family="system-ui, sans-serif" font-weight="900" font-size="24" text-anchor="middle" letter-spacing="8">BINGO</text>
+    
+    <!-- Mini Grid 4x4 representation -->
+    <g transform="translate(-80, -50)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="42" y="0" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="84" y="0" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="126" y="0" width="32" height="32" rx="6" fill="#f1f5f9"/>
+
+      <rect x="0" y="40" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="42" y="40" width="32" height="32" rx="6" fill="#fbbf24"/>
+      <rect x="84" y="40" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="126" y="40" width="32" height="32" rx="6" fill="#f1f5f9"/>
+
+      <rect x="0" y="80" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="42" y="80" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="84" y="80" width="32" height="32" rx="6" fill="#ef4444"/>
+      <rect x="126" y="80" width="32" height="32" rx="6" fill="#f1f5f9"/>
+
+      <rect x="0" y="120" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="42" y="120" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="84" y="120" width="32" height="32" rx="6" fill="#f1f5f9"/>
+      <rect x="126" y="120" width="32" height="32" rx="6" fill="#10b981"/>
+    </g>
+  </g>
+
+  <!-- Guillotine Scissors icon / mark -->
+  <g transform="translate(180, 110)">
+    <circle cx="0" cy="0" r="32" fill="#6366f1" filter="url(#shadow)"/>
+    <path d="M-10,-8 L8,10 M-10,8 L8,-10" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="-12" cy="-10" r="4" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <circle cx="-12" cy="10" r="4" fill="none" stroke="#ffffff" stroke-width="3"/>
+  </g>
+</svg>
